@@ -1,0 +1,339 @@
+:root {
+    --bgcolor: #fff;
+    /* #fff #000 */
+    --font_color: rgb(28, 139, 28);
+    /*rgb(8, 73, 8) rgb(81, 240, 115)*/
+    --text_color: #000;
+    /* #ff0; rgb(58, 11, 85);*/
+    --special_text: rgb(8, 73, 8);
+    --shadow: rgba(9, 155, 82, 0.788);
+}
+
+body {
+    background-color: var(--bgcolor);
+}
+#ts-logo{
+    height: 5rem;
+    width:5rem;
+    position: fixed;
+    top:5px;
+    left:5px;
+    z-index: 1;
+}
+#menubutton {
+    display: none;
+}
+
+#menu_expand_list {
+    display: none;
+    z-index: 1;
+    float: right;
+    position: fixed;
+    right: 4rem;
+    top: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.small {
+    width: 2rem;
+}
+
+#navbar {
+    display: block;
+    background-color: var(--bgcolor);
+    color: var(--font_color);
+    padding-top: 1rem;
+    position: fixed;
+    right: 1%;
+    top: 2px;
+    z-index: 1;
+}
+
+.home-anchor {
+    text-decoration: none;
+    font-family: fantasy;
+    font-style: italic;
+    font-size: 2rem;
+    background-color: var(--bgcolor);
+    color: var(--font_color);
+    padding: 1rem;
+    margin: 0;
+    transition-duration: 0.6s;
+    transition-property: all;
+}
+
+.home-anchor:hover {
+    font-size: 2.5rem;
+    background-color: var(--font_color);
+    color: var(--bgcolor);
+    font-style: bold;
+    text-decoration: none;
+}
+
+.home-anchor-menu {
+    display: block;
+}
+
+@media (max-width:700px) {
+    #menubutton {
+        display: block;
+        margin-left: 1rem;
+    }
+    #menu_view{
+        display: block;
+    }
+    #navbar {
+        display: none;
+    }
+    #home div{
+        z-index: 0;
+    }
+    #home-image{
+        width:100%;
+    }
+    #actual_text {
+        padding-right: 10%;
+    }
+}
+
+#menu_view {
+    float: right;
+    display: block;
+    position: fixed;
+    right: 2rem;
+    top: 1rem;
+    z-index:10000;
+}
+
+#menu_expand_list {
+    width: fit-content;
+}
+
+#home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    font-weight: 1000;
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    background: linear-gradient(135deg, var(--bgcolor), var(--font_color));
+}
+
+#home div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#college-name {
+    color: var(--font_color);
+
+}
+
+#home_text {
+    color: var(--text_color);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#home-name {
+    font-size: 4rem;
+    padding: 0;
+    margin: 0;
+    color: var(--special_text);
+    font-family: monospace;
+    text-shadow: var(--shadow) 4px 2px;
+
+}
+
+#home-image {
+    padding: 2rem 2rem 3rem 5rem;
+}
+@media(min-width:700px)
+{
+    #home-image{
+        width:50%;
+    }
+}
+#home_scroll {
+    font-size: 2rem;
+    background-color: var(--font_color);
+    color: var(--bgcolor);
+    transition: all;
+    margin: 0;
+    border-radius: 2rem;
+    padding: 1rem;
+    transition-duration: 0.5s;
+    text-decoration: none;
+}
+
+#home_scroll:hover {
+    font-size: 2.4rem;
+    background-color: var(--bgcolor);
+    color: var(--font_color);
+}
+.mode-class{
+    font-family: fantasy;
+}
+
+#animatedearth {
+    width: 100%;
+    padding: 2rem;
+
+}
+
+.img-circle {
+    width: 35%;
+}
+
+.logo {
+    width: 3rem;
+}
+
+#homelogo {
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    animation-name: homelogoanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes homelogoanimation {
+    0% {
+        position: relative;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    25% {
+        position: relative;
+        top: 1rem;
+        left: 50%;
+    }
+
+    50% {
+        position: relative;
+        top:100%;
+        left: 50%;
+    }
+
+    75% {
+        position: relative;
+        bottom: 0rem;
+        left: 1rem;
+    }
+}
+
+#aboutlogo {
+    position: relative;
+    top: 1rem;
+    left: 50%;
+    animation-name: aboutlogoanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes aboutlogoanimation {
+    0% {
+        position: relative;
+        bottom: 0rem;
+        left: 1rem;
+    }
+    25% {
+        position: relative;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    50% {
+        position: relative;
+        top: 1rem;
+        left: 50%;
+    }
+
+    75% {
+        position: relative;
+        bottom: 0rem;
+        left: 50%;
+    }
+}
+
+#contactlogo {
+    position: relative;
+    bottom: 0rem;
+    left: 50%;
+    animation-name: contactlogoanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes contactlogoanimation {
+    0% {
+        position: relative;
+        bottom: 0rem;
+        left: 50%;
+    }
+    25% {
+        position: relative;
+        bottom: 0rem;
+        left: 1rem;
+    }
+    50% {
+        position: relative;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    75% {
+        position: relative;
+        top: 1rem;
+        left: 50%;
+    }
+
+}
+#domainslogo {
+    position: relative;
+    bottom: 1rem;
+    left: 1rem;
+    animation-name: domainslogoanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes domainslogoanimation {
+    
+    0% {
+        position: relative;
+        bottom:0rem;
+        left:0rem;
+    }
+    25% {
+        position: relative;
+        bottom: 0rem;
+        left: 50%;
+    }
+    50% {
+        position: relative;
+        bottom: 0rem;
+        left: 1rem;
+    }
+    75% {
+        position: relative;
+        top: 1rem;
+        left: 1rem;
+    }
+}
+#earth {
+    position: relative;
+    left: 8.9rem;
+    width: 35%;
+}
+
